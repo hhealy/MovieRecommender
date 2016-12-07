@@ -11,7 +11,7 @@ public class MovieRecommenderAPI implements MovieRecommenderInterface
 {
 
 	@Override
-	public void addUser(String firstName, String lastName, int age, char gender, String occupation) 
+	public void addUser(String firstName, String lastName, int age, String gender, String occupation) 
 	{
 		
 	}

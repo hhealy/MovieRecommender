@@ -3,7 +3,7 @@ package controllers;
 public interface MovieRecommenderInterface 
 {
 	//Add a user to the program.
-	public void addUser(String firstName, String lastName, int age, char gender, String occupation);
+	public void addUser(String firstName, String lastName, int age, String gender, String occupation);
 	
 	//Remove a user from the program.
 	public void removeUser(double userID);
