@@ -5,7 +5,7 @@ import java.util.List;
 
 import models.Movie;
 import models.Rating;
-import models.Recommendation;
+import models.User;
 
 public class MovieRecommenderAPI implements MovieRecommenderInterface
 {
