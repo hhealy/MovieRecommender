@@ -27,8 +27,8 @@ public interface MovieRecommenderInterface
 	public String getTopTenMovies();
 	
 	//Load from the serializer
-	public void load();
+	public void load() throws Exception;
 	
 	//Write to the serializer
-	public void write();
+	public void write() throws Exception;
 }

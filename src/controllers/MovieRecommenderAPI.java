@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,18 +8,21 @@ import java.util.Map;
 import models.Movie;
 import models.Rating;
 import models.User;
+import utils.SerializerInterface;
 import utils.Serializer;
 
 public class MovieRecommenderAPI implements MovieRecommenderInterface
 {
-	private Serializer serializer;
 	public Map<Long, User> userIndex = new HashMap<>();
 	public Map<Long, Movie> movieIndex = new HashMap<>();
 	public Map<Long, Rating> ratingIndex = new HashMap<>();
 	
-	public MovieRecommenderAPI(Serializer serialzer)
+	public File data = new File("data.xml");
+	public Serializer serializer = new Serializer(data);
+	
+	public MovieRecommenderAPI()
 	{
-		this.serializer = serializer;
+		
 	}
 	
 	@Override
@@ -70,16 +74,42 @@ public class MovieRecommenderAPI implements MovieRecommenderInterface
 	{
 		return null;
 	}
-
+	
 	@Override
-	public void load() 
+	public void write() throws Exception
 	{
-		
+		serializer.push(userIndex);
+		serializer.push(movieIndex);
+		serializer.push(ratingIndex);
+		serializer.write();
 	}
 
 	@Override
-	public void write() 
+	public void load() throws Exception
 	{
+		if (data.isFile())
+		{
+			serializer.read();	
+			ratingIndex = (Map<Long, Rating>) serializer.pop();
+			movieIndex = (Map<Long, Movie>) serializer.pop();
+			userIndex = (Map<Long, User>) serializer.pop();
+		}
 		
+		else
+		{
+			DataLoader loader = new DataLoader();
+			
+			List <User> users = loader.loadUsers("moviedata_small/users5.dat");
+			for (User user : users)
+			{
+				userIndex.put(user.getUserID(), user);
+			}
+			
+			List <Movie> movies = loader.loadMovies("moviedata_small/items5.dat");
+			for (Movie movie : movies)
+			{
+				movieIndex.put(movie.getMovieID(), movie);
+			}
+		}
 	}
 }
