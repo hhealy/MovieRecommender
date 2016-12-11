@@ -17,7 +17,7 @@ public class ModelTest
 	public static Movie[] movies =
 	{
 			new Movie(23l, "Batman Begins", "2005", "http://www.imdb.com/title/tt0372784/?ref_=nv_sr_3"),
-			new Movie(22, "The Dark Knight", "2008", "http://www.imdb.com/title/tt0468569/?ref_=nv_sr_1"),
+			new Movie(22l, "The Dark Knight", "2008", "http://www.imdb.com/title/tt0468569/?ref_=nv_sr_1"),
 			new Movie(24l, "The Dark Knight Rises", "2012", "http://www.imdb.com/title/tt1345836/?ref_=tt_rec_tt"),
 			new Movie(42l, "Inception", "2010", "http://www.imdb.com/title/tt1375666/?ref_=tt_rec_tt"),
 			new Movie(54l, "Disturbia", "2007", "http://www.imdb.com/title/tt0486822/?ref_=nv_sr_1")

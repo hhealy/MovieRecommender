@@ -30,7 +30,7 @@ public class Movie
 		return url;
 	}
 	
-	public long movieID()
+	public long getMovieID()
 	{
 		return movieID;
 	}

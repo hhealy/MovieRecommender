@@ -37,12 +37,12 @@ public class MovieTest
 		assertNotEquals(2007, movies[1].getYear());
 	}
 	
-	//@Test
+	@Test
 	public void testGetMovieID() 
 	{
-		assertEquals(12, movies[0].getMovieID(), 0.001);
-		assertEquals(3, movies[1].getMovieID(), 0.001);
-		assertEquals(5, movies[2].getMovieID(), 0.001);
+		assertEquals(23l, movies[0].getMovieID(), 0.001);
+		assertEquals(22l, movies[1].getMovieID(), 0.001);
+		assertEquals(24l, movies[2].getMovieID(), 0.001);
 		assertNotEquals(67, movies[0].getMovieID(), 0.001);
 		assertNotEquals(10, movies[1].getMovieID(), 0.001);
 	}
