@@ -1,11 +1,9 @@
 package controllers;
 
 import java.io.File;
-import java.io.FileWriter;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
 import utils.In;
 
 import models.Movie;
@@ -36,9 +34,9 @@ public class DataLoader
             	String firstName = userTokens[1];
             	String lastName = userTokens[2];
             	int age = Integer.parseInt(userTokens[3]);
-            	String gender = userTokens[4];
+            	char gender = userTokens[4].charAt(0);
             	String occupation = userTokens[5];
-            	double userID = double.parseDouble(userTokens[0]);
+            	Long userID = Long.parseLong(userTokens[0]);
             	
                 users.add(new User(firstName, lastName, age, gender, occupation, userID));
             }
@@ -66,12 +64,14 @@ public class DataLoader
             // parse user details string
             String[] movieTokens = movieDetails.split(delims);
             // output user data to console.
-            if (movieTokens.length == 7) 
+            if (movieTokens.length == 23) 
             {
-                System.out.println("ID: "+ movieTokens[0]+",First Name:"+
-                		movieTokens[1]+",Surname:" + movieTokens[2]+",Age:"+
-                        Integer.parseInt(movieTokens[3])+",Gender:"+ movieTokens[4]+",Occupation:"+
-                        movieTokens[5]);
+            	Long movieID = Long.parseLong(movieTokens[0]);
+            	String title = movieTokens[1];
+            	String year = movieTokens[2];
+            	String url = movieTokens[3];
+            	
+            	movies.add(new Movie(movieID, title, year, url));
             }
             
             else
@@ -99,13 +99,13 @@ public class DataLoader
             String[] ratingTokens = ratingDetails.split(delims);
 
             // output user data to console.
-            if (ratingTokens.length == 7) 
+            if (ratingTokens.length == 4) 
             {
-                System.out.println("UserID: "+ ratingTokens[0]+",First Name:"+
-                		ratingTokens[1]+",Surname:" + ratingTokens[2]+",Age:"+
-                        Integer.parseInt(ratingTokens[3])+",Gender:"+ ratingTokens[4]+",Occupation:"+
-                        ratingTokens[5]);
-
+            	long userID = Long.parseLong(ratingTokens[0]);
+            	long movieID = Long.parseLong(ratingTokens[1]);
+            	int ratings	= Integer.parseInt(ratingTokens[2]);
+            	
+            	rating.add(new Rating(userID, movieID, ratings));
             }
             
             else

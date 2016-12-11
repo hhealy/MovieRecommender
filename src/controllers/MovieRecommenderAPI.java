@@ -11,13 +11,13 @@ public class MovieRecommenderAPI implements MovieRecommenderInterface
 {
 
 	@Override
-	public void addUser(String firstName, String lastName, int age, String gender, String occupation) 
+	public void addUser(String firstName, String lastName, int age, char gender, String occupation) 
 	{
 		
 	}
 
 	@Override
-	public void removeUser(double userID) 
+	public void removeUser(long userID) 
 	{
 		
 	}
@@ -29,25 +29,25 @@ public class MovieRecommenderAPI implements MovieRecommenderInterface
 	}
 
 	@Override
-	public void addRating(double userID, double movieID, int rating) 
+	public void addRating(long userID, long movieID, int rating) 
 	{
 		
 	}
 
 	@Override
-	public String getMovie(double movieID) 
+	public String getMovie(long movieID) 
 	{
 		return null;
 	}
 
 	@Override
-	public int getUserRating(double userID) 
+	public int getUserRating(long userID) 
 	{
 		return 0;
 	}
 
 	@Override
-	public String getUserRecommendation(double userID) 
+	public String getUserRecommendation(long userID) 
 	{
 		return null;
 	}

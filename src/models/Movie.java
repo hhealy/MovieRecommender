@@ -3,11 +3,11 @@ package models;
 public class Movie 
 {
 	public String name;
-	public int year;
+	public String year;
 	public String url;
-	public double movieID;
+	public long movieID;
 	
-	public Movie(String name, int year, String url, double movieID)
+	public Movie(long movieID, String name, String year, String url)
 	{
 		this.name = name;
 		this.year = year;
@@ -20,7 +20,7 @@ public class Movie
 		return name;
 	}
 	
-	public int getYear()
+	public String getYear()
 	{
 		return year;
 	}
@@ -30,8 +30,13 @@ public class Movie
 		return url;
 	}
 	
-	public double movieID()
+	public long movieID()
 	{
 		return movieID;
+	}
+	
+	public String toString()
+	{
+		return "ID = " + movieID + " Title = " + name;
 	}
 }

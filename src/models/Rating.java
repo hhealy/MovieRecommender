@@ -2,23 +2,23 @@ package models;
 
 public class Rating 
 {
-	public double userID;
-	public double movieID;
+	public long userID;
+	public long movieID;
 	public int rating;
 	
-	public Rating(double movieID, double userID, int rating)
+	public Rating(long movieID, long userID, int rating)
 	{
 		this.userID = userID;
 		this.movieID = movieID;
 		this.rating = rating;
 	}
 	
-	public double getUserID()
+	public long getUserID()
 	{
 		return userID;
 	}
 	
-	public double getMovieID()
+	public long getMovieID()
 	{
 		return movieID;
 	}
@@ -26,5 +26,10 @@ public class Rating
 	public int getRating()
 	{
 		return rating;
+	}
+	
+	public String toString()
+	{
+		return "UserID =" + userID + " MovieID = " + movieID + " Rating = " + rating;
 	}
 }

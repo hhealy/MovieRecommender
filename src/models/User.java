@@ -5,11 +5,11 @@ public class User
 	public String firstName;
 	public String lastName;
 	public int age;
-	public String gender;
+	public char gender;
 	public String occupation;
-	public double userID;
+	public long userID;
 	
-	public User(String firstName, String lastName, int age, String gender, String occupation, double userID)
+	public User(String firstName, String lastName, int age, char gender, String occupation, long userID)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -34,7 +34,7 @@ public class User
 		return age;
 	}
 	
-	public String getGender()
+	public char getGender()
 	{
 		return gender;
 	}
@@ -44,8 +44,13 @@ public class User
 		return occupation;
 	}
 	
-	public double getUserID()
+	public long getUserID()
 	{
 		return userID;
+	}
+	
+	public String toString()
+	{
+		return "Name = " + firstName + " " + lastName + " Gender = " + gender + " Age = " + age + " Occupation = " + occupation + "ID = " + userID;
 	}
 }
