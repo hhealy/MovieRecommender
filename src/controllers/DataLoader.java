@@ -71,7 +71,7 @@ public class DataLoader
             	String year = movieTokens[2];
             	String url = movieTokens[3];
             	
-            	movies.add(new Movie(movieID, title, year, url));
+            	movies.add(new Movie(title, year, url, movieID));
             }
             
             else

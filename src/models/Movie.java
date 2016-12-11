@@ -7,7 +7,7 @@ public class Movie
 	public String url;
 	public long movieID;
 	
-	public Movie(long movieID, String name, String year, String url)
+	public Movie(String name, String year, String url, Long movieID)
 	{
 		this.name = name;
 		this.year = year;

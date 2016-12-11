@@ -64,16 +64,16 @@ public class DataLoaderTest
 		users.add(user4);
 		users.add(user5);
 		
-		movie1 = new Movie(1l, "Toy Story (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");
-		movie2 = new Movie(2l, "GoldenEye (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?GoldenEye%20(1995)");
-		movie3 = new Movie(3l, "Four Rooms (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Four%20Rooms%20(1995)");
-		movie4 = new Movie(4l, "Get Shorty (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Get%20Shorty%20(1995)");
-		movie5 = new Movie(5l, "Copycat (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Copycat%20(1995)");
-		movie6 = new Movie(6l, "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)", "01-Jan-1995", "http://us.imdb.com/Title?Yao+a+yao+yao+dao+waipo+qiao+(1995)");
-		movie7 = new Movie(7l, "Twelve Monkeys (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Twelve%20Monkeys%20(1995)");
-		movie8 = new Movie(8l, "Babe (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Babe%20(1995)");
-		movie9 = new Movie(9l, "Dead Man Walking (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Dead%20Man%20Walking%20(1995)");
-		movie10 = new Movie(10l, "Richard III (1995)", "01-Jan-1996", "http://us.imdb.com/M/title-exact?Richard%20III%20(1995)");
+		movie1 = new Movie("Toy Story (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)", 1L);
+		movie2 = new Movie("GoldenEye (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?GoldenEye%20(1995)",2L);
+		movie3 = new Movie("Four Rooms (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Four%20Rooms%20(1995)", 3L);
+		movie4 = new Movie("Get Shorty (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Get%20Shorty%20(1995)", 4L);
+		movie5 = new Movie("Copycat (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Copycat%20(1995)", 5L);
+		movie6 = new Movie("Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)", "01-Jan-1995", "http://us.imdb.com/Title?Yao+a+yao+yao+dao+waipo+qiao+(1995)", 6L);
+		movie7 = new Movie("Twelve Monkeys (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Twelve%20Monkeys%20(1995)", 7L);
+		movie8 = new Movie("Babe (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Babe%20(1995)", 8L);
+		movie9 = new Movie("Dead Man Walking (1995)", "01-Jan-1995", "http://us.imdb.com/M/title-exact?Dead%20Man%20Walking%20(1995)", 9L);
+		movie10 = new Movie("Richard III (1995)", "01-Jan-1996", "http://us.imdb.com/M/title-exact?Richard%20III%20(1995)", 10L);
 		movies = new ArrayList<Movie>();
 		movies.add(movie1);
 		movies.add(movie2);
